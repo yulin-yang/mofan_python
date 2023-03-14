@@ -1,6 +1,7 @@
 from maze_env import Maze
 from RL_brain import QLearningTable
 
+# qlearning更新策略
 
 def update():
     # 学习 100 回合
@@ -31,6 +32,7 @@ def update():
     # 结束游戏并关闭窗口
     print('game over')
     env.destroy()
+
 
 if __name__ == "__main__":
     # 定义环境 env 和 RL 方式
