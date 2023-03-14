@@ -1,7 +1,7 @@
 from maze_env import Maze
 from RL_brain import QLearningTable
 
-
+# 这个测试
 def update():
     # 学习 100 回合
     for episode in range(100):
