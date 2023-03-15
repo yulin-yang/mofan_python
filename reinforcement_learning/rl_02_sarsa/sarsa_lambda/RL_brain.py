@@ -83,6 +83,7 @@ class SarsaLambdaTable(RL):
         # self.eligibility_trace.loc[s, a] += 1
 
         # Method 2:
+        # 设置了上限
         self.eligibility_trace.loc[s, :] *= 0
         self.eligibility_trace.loc[s, a] = 1
 
