@@ -18,12 +18,13 @@ class QLearningTable:
         self.q_table = pd.DataFrame(columns=self.actions, dtype=np.float64)
 
     def choose_action(self, observation):
+        # 首先检查该状态是否存在 q 表中
         self.check_state_exist(observation)
         # action selection
         if np.random.uniform() < self.epsilon:
             # choose best action
             state_action = self.q_table.loc[observation, :]
-            # some actions may have the same value, randomly choose on in these actions
+            # some actions may have the same value, randomly choose on in these actions，打乱索引的位置
             action = np.random.choice(state_action[state_action == np.max(state_action)].index)
         else:
             # choose random action

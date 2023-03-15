@@ -32,6 +32,7 @@ def update():
     print('game over')
     env.destroy()
 
+
 if __name__ == "__main__":
     # 定义环境 env 和 RL 方式
     env = Maze()
