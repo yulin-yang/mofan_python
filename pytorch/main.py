@@ -9,7 +9,7 @@ tensor2array = torch_data.numpy()
 
 print(
     '\n数据转换:\n',
-    '\nnumpy array:\n', np_data,          # [[0 1 2], [3 4 5]]
+    '\nmofan-02-numpy array:\n', np_data,          # [[0 1 2], [3 4 5]]
     '\ntorch tensor:\n', torch_data,      # 0  1  2 \n 3  4  5    [torch.LongTensor of size 2x3]
     '\ntensor to array:\n', tensor2array, # [[0 1 2], [3 4 5]]
 )
@@ -21,6 +21,6 @@ tensor = torch.FloatTensor(data)  # 将data转换成32位浮点数tensor
 
 print(
     '\nmatrix multiplication (matmul):',
-    '\nnumpy: \n', np.matmul(data, data),     # [[7, 10], [15, 22]]
+    '\nmofan-02-numpy: \n', np.matmul(data, data),     # [[7, 10], [15, 22]]
     '\ntorch: \n', torch.mm(tensor, tensor)   # [[7, 10], [15, 22]]
 )
